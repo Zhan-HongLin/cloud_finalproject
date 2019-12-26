@@ -1,0 +1,71 @@
+<!DOCTYPEhtml>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+	<title>食譜大全</title>
+</head>
+<body>
+
+	<h2>歡迎使用本網站：各地溫度如下</h2>
+	
+	<style>
+	table, th, td {
+    border: 1px solid orange;
+	}
+	th, td {
+		padding: 10px;
+	}
+	</style>
+	
+	<table style="width:30%">
+	<tr>
+    <th>地區</th>
+    <th>溫度</th>
+	</tr>
+	
+	{% for area_list,temp_list in alll %} <!-- 使用zip將串列集合後即可同時調用 -->
+    <tr>   
+			
+            <td>{{area_list}}</td>
+            <td>{{temp_list}}</td>
+    </tr>
+    {% endfor %}
+	
+	</table>	
+	
+	<h4>熱門料理</h4>
+       
+	<style>
+	table, th, td {
+    border: 1px solid orange;
+	}
+	th, td {
+		padding: 10px;
+	}
+	</style>
+	
+	<table style="width:30%">
+	<tr>
+    <th>熱門食物</th>
+	</tr>
+	
+	{% for i in hotlist %} <!-- 使用zip將串列集合後即可同時調用 -->
+    <tr>   
+			
+		<td>{{i}}</td>
+    </tr>
+    {% endfor %}
+	
+	</table>
+	
+	<h5>聊天機器人</h5>
+	
+	<form action="/catalog/bot/" method="get"> 
+		<input type="submit" value="來聊天">
+	</form>
+
+	
+	
+</body>
+</html>

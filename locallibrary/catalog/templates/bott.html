@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>聊天機器人</title>
+</head>
+<body>
+	<p>{{question}}</p>
+
+
+    {% for cuisine_pic_list,cuisine_name_list,cuisine_herf_list,cuisine_cooker_list,cuisine_discription_list,cuisine_ingredient_list in response %} <!-- 使用zip將串列集合後即可同時調用 -->
+        
+        
+	<a href="{{cuisine_herf_list}}">{{ cuisine_name_list }}</a>
+	<p><img src="{{cuisine_pic_list}}" width="60" height="100"></p>
+    <p>{{cuisine_cooker_list}}</p>
+    <p>{{cuisine_discription_list}}</p>
+    <p>{{cuisine_ingredient_list}}</p>
+
+        
+    {% endfor %}
+    
+	
+	<form action="/catalog/bot/"method="post">{% csrf_token %}
+	輸入:<input type="text" name="question"> <br>
+	<input type="submit"value="送出"><p>
+	
+
+    
+</body>
+</html>
