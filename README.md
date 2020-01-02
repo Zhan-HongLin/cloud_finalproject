@@ -6,6 +6,6 @@
   用動態網頁方式呈現類似line的對話框，每次的新對話紀錄堆疊上去
 
 如何執行網頁：
-  首先將整個zip檔下載下來
-  >需先安裝本次專案的相關套件 bs4, gtts, django, waston assistant (利用pip install安裝)
-  >在 cmd 進入 finalproject/locallibrary 目錄後，輸入 python manage.py runserver  
+  >1. 首先將整個zip檔下載下來
+  >2. 需安裝本次專案的相關套件 bs4, gtts, django, waston assistant (利用pip install安裝)
+  >3. 在 cmd 進入 finalproject/locallibrary 目錄後，輸入 python manage.py runserver  
